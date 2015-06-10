@@ -24,11 +24,8 @@ if($_GET["mode"] == "upload") {
 	}
 	$submit = $_POST['submit']; //Port variable from HTML
 	$file = $_POST['file']; //Port variable from HTML
-	$desc = $_POST['desc']; //Short description - Port variable from HTML
-	$ldesc = $_POST['ldesc']; //Long description - Port variable from HTML
 	if($submit) //If you clicked on upload
 	{
-		date_default_timezone_set('UTC');
 		$target_dir = "uploads/"; //Target folder ./root/uploads
 		$target_dir = $target_dir . basename( $_FILES["file"]["name"]); //Pack file for target folder
 		$uploadOk=1; //If ok
